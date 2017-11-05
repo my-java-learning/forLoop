@@ -16,9 +16,21 @@ public class Main {
             System.out.println("10,000 at " + interestRate + "% interest = " + String.format("%.2f",calculateInterest(10000.0, interestRate)));
         }
 
+        System.out.println("" + isPrime(3));
     }
 
     public static double calculateInterest(double amount, double interestRate){
         return (amount * (interestRate/100));
+    }
+
+    public static boolean isPrime(int number){
+        if(number > 1){
+            int counter = 0;
+            for(int i = 2 ; i <= number ; i++){
+               if(number % i == 0) counter++;
+            }
+            if (counter == 2) return true;
+        }
+        return false;
     }
 }
