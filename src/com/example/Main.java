@@ -16,7 +16,7 @@ public class Main {
             System.out.println("10,000 at " + interestRate + "% interest = " + String.format("%.2f",calculateInterest(10000.0, interestRate)));
         }
 
-        System.out.println("" + isPrime(3));
+        System.out.println("" + isPrime(2));
     }
 
     public static double calculateInterest(double amount, double interestRate){
@@ -25,11 +25,10 @@ public class Main {
 
     public static boolean isPrime(int number){
         if(number > 1){
-            int counter = 0;
-            for(int i = 1 ; i <= number ; i++){
-               if(number % i == 0) counter++;
+            for(int i = 2 ; i <= number/2 ; i++){
+               if(number % i == 0) return false;
             }
-            if (counter == 2) return true;
+            return true;
         }
         return false;
     }
