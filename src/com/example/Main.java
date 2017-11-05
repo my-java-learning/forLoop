@@ -17,6 +17,16 @@ public class Main {
         }
 
         System.out.println("" + isPrime(2));
+
+        int primeCounter = 0;
+
+        for(int i = 0 ; i <= 100 ; i++){
+            if(isPrime(i)){
+                System.out.println("" + i);
+                primeCounter++;
+                if(primeCounter == 3) break;
+            }
+        }
     }
 
     public static double calculateInterest(double amount, double interestRate){
