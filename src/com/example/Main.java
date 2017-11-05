@@ -26,7 +26,7 @@ public class Main {
     public static boolean isPrime(int number){
         if(number > 1){
             int counter = 0;
-            for(int i = 2 ; i <= number ; i++){
+            for(int i = 1 ; i <= number ; i++){
                if(number % i == 0) counter++;
             }
             if (counter == 2) return true;
